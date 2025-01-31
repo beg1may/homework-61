@@ -1,4 +1,4 @@
-import {useState, useEffect, useCallback} from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import { API_URL, URL_INFO } from '../../globalConstants.ts';
 import CountryList from '../../Components/CountryList/CountryList';
@@ -50,13 +50,13 @@ const Country = () => {
     }, [selectedCountry, fetchCountryInfo]);
 
     return (
-        <div>
+        <div className="container my-5">
             <div className="row">
-                <div className="col-4">
+                <div className="col-md-4">
                     <CountryList countries={countries} onSelectCountry={setSelectedCountry} />
                 </div>
 
-                <div className="col-8">
+                <div className="col-md-8">
                     <CountryInfo
                         countryInfo={countryInfo}
                         borderCountries={borderCountries}
